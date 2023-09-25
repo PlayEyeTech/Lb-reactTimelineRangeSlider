@@ -1,0 +1,76 @@
+{
+  "name": "@matiaslgonzalez/react-timeline-range-slider",
+  "version": "1.6",
+  "description": "Time Slider component for React",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "scripts": {
+    "build": "yarn build:esm",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
+    "test": "jest --config jest.config.js",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn prettier && yarn lint"
+  },
+  "author": "Elizaveta Shkodkina <lizashkodkina@gmail.com>",
+  "contributors": [
+    "Matías González <hello@matiaslgonzalez.com>"
+  ],
+  "homepage": "https://www.npmjs.com/package/@matiaslgonzalez/react-timeline-range-slider",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MatiasLGonzalez/react-timeline-range-slider"
+  },
+  "keywords": [
+    "react-component",
+    "react",
+    "slider",
+    "component",
+    "time-picker",
+    "react-slider",
+    "range-slider",
+    "range"
+  ],
+  "license": "MIT",
+  "packageManager": "yarn@3.5.0",
+  "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "@types/d3-scale": "^4.0.3",
+    "@types/jest": "^29.5.1",
+    "@types/react": "^18.0.38",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^29.5.0",
+    "jest-canvas-mock": "^2.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "prettier": "^2.8.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "d3-scale": "^4.0.2",
+    "date-fns": "^2.29.3",
+    "react-compound-slider": "^3.4.0",
+    "tslib": "^2.5.0"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ]
+}
