@@ -6,13 +6,13 @@
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
   "scripts": {
-    "build": "yarn build:esm",
+    "build": "yarn build –ignore-workspace-root-check",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
     "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
     "test": "jest --config jest.config.js",
-    "prepare": "yarn build",
+    "prepare": "yarn build –ignore-workspace-root-check",
     "prepublishOnly": "yarn prettier && yarn lint"
   },
   "author": "Elizaveta Shkodkina <lizashkodkina@gmail.com>",
